@@ -134,7 +134,7 @@ class Student {
 }
 
 
-app.get('/students', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         const students = await Student.getAllStudents();
         res.status(200).json({ message: "Estudantes: ", students });
